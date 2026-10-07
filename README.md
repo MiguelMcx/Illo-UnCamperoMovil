@@ -104,10 +104,10 @@ App/app/src/main/java/com/illouncampero/illouncampero/
 PaymentConfiguration.init(applicationContext, "pk_test_...")
 ```
 
-3. En `data/network/RetrofitClient.kt`, ajusta la `BASE_URL` si el backend no corre en local:
+3. En `data/network/RetrofitClient.kt`, la `BASE_URL` apunta por defecto al backend desplegado en Render. Si quieres usar tu backend local (puerto 8081), cámbiala desde el emulador a:
 
 ```kotlin
-private const val BASE_URL = "http://10.0.2.2:8080/"
+private const val BASE_URL = "http://10.0.2.2:8081/"
 ```
 
 4. Sincroniza Gradle y ejecuta en emulador o dispositivo físico.
